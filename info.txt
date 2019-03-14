@@ -1,0 +1,16 @@
+### vue单元测试相关 测试驱动开发
+环境要求
+node 
+npm
+webpack
+
+
+测试运行环境: google karma
+JS测试框架: mocha
+断言库: chai
+
+测试文件: 组件名.spec.js
+语法: chai语法
+
+
+

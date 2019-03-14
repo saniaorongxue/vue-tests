@@ -8,14 +8,14 @@ describe('List', () => {
     const Constructor = Vue.extend(List);
     const ListComponent = new Constructor().$mount();
 
-    expect(ListComponent.$el.textContent).to.contain('play games');
+    expect(ListComponent.$el.textContent).to.contain('play gamess');
   })
 
   it('测试2', () => {
     const Constructor = Vue.extend(List);
     const ListComponent = new Constructor().$mount();
 
-    ListComponent.newItem = 'brush my teeth';
+    ListComponent.newItem = 'brush my teethssss';
 
     // simulate click event
     const button = ListComponent.$el.querySelector('button');
