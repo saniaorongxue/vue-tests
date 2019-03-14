@@ -4,14 +4,14 @@ import Vue from 'vue';
 
 describe('List', () => {
 
-  it('displays items from the list', () => {
+  it('测试1', () => {
     const Constructor = Vue.extend(List);
     const ListComponent = new Constructor().$mount();
 
     expect(ListComponent.$el.textContent).to.contain('play games');
   })
 
-  it('adds a new item to list on click', () => {
+  it('测试2', () => {
     const Constructor = Vue.extend(List);
     const ListComponent = new Constructor().$mount();
 
@@ -28,7 +28,7 @@ describe('List', () => {
     expect(ListComponent.listItems).to.contain('brush my teeth');
   })
 
-  it('adds new item to list on click with avoriaz', () => {
+  it('测试3', () => {
     const ListComponent = mount(List);
 
     ListComponent.setData({
