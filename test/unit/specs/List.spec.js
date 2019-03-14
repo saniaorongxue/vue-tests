@@ -1,8 +1,8 @@
 import { mount } from 'avoriaz';
-import List from '@/components/List';
+import List from '../../../src/components/List.vue';
 import Vue from 'vue';
 
-describe('List.vue', () => {
+describe('List', () => {
 
   it('displays items from the list', () => {
     const Constructor = Vue.extend(List);
