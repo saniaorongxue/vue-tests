@@ -10,7 +10,8 @@ var webpackConfig = merge(baseConfig, {
   module: {
     rules: utils.styleLoaders()
   },
-  devtool: '#inline-source-map',
+  // devtool: '#inline-source-map',
+  devtool: '#eval-source-map',
   resolveLoader: {
     alias: {
       // necessary to to make lang="scss" work in test when using vue-loader's ?inject option 
@@ -27,5 +28,26 @@ var webpackConfig = merge(baseConfig, {
 
 // no need for app entry during tests
 delete webpackConfig.entry
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.devtool = '#source-map'
+  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    })
+  ])
+}
 
 module.exports = webpackConfig
