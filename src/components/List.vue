@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>My To Do List</h1>
-    </br>
+    <br/>
     <input v-model="newItem" >
     <button @click="addItemToList">Add</button>
     <ul>
