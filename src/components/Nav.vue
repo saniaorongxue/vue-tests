@@ -1,19 +1,15 @@
 <template>
     <div class="Nav">
-       <ul>
-           <li v-for="(item, index) in navlist">
-             <slot><span>{{item.name}}</span></slot>
-             <slot><span>{{item.path}}</span></slot>
-           </li>
-       </ul>
-      
+      <ul>
+        <slot name="item" v-for="item in items" :text="item.text">默认值</slot>
+      </ul>
     </div>
 </template>
 
 <script>
     export default {
         name: "Nav",
-        props: ['navlist'],
+        props: ['items'],
         data() {
             return {}
         },

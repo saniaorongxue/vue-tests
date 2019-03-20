@@ -2,7 +2,14 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <Nav :navlist="navlist1"></Nav>
+    <div class="parent">
+      <p>父组件</p>
+      <Nav>
+        <template slot="item" :items="items">
+          <li>{{ items.text }}</li>
+        </template>
+      </Nav>
+    </div>
     <!--<Nav :navlist="navlist2" slot="s2"></Nav>-->
   </div>
 </template>
@@ -13,6 +20,11 @@ export default {
   name: 'hello',
   data () {
     return {
+      items:[
+        {id:1,text:'第1段'},
+        {id:2,text:'第2段'},
+        {id:3,text:'第3段'},
+      ],
       msg: 'Welcome to Your Vue.js App',
       navlist1: [
         {
