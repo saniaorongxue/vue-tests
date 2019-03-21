@@ -16,7 +16,9 @@
         mounted() {
 
         },
-        methods: {}
+        methods: {
+          
+        }
     }
 </script>
 
