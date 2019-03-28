@@ -1,0 +1,49 @@
+ // //右键弹出菜单
+        // document.oncontextmenu();
+
+        // section.onclick = function(e) {
+        //     var event = e || window.event;
+        //     var target = event.target || event.srcElement;
+        //     console.log(target);
+        // }
+        // //只能用在IE鼠标事件中
+        // section.setCapture();
+        // section.releaseCapture();
+        //
+        // //firefox
+        // captureEvents(Event.eventType)
+        // releaseEvents(Event.eventType)
+        //
+        // //监听鼠标左右键
+        // section.onmousedown = function(e) {
+        //     let event = e || window.event;
+        //     if(event.button == 0) {
+        //         console.log('left');
+        //     }else if(event.button == 2) {
+        //         console.log('right');
+        //     }
+        // }
+
+
+        //按键监控
+        /*
+        *  onkeydown
+        *       charCode: 0  //不能捕获是哪个按键
+        *       code
+        *       type: "keydown" //事件类型
+        *       which: 65 //只是返回按键排序
+        *
+        *  onkeypress  //只能疾控字符型按键
+        *       charCode   //返回编码,转换方法  String.fromCharCode 返回是哪个按键
+        *
+        *  onkeyup
+        *
+        *
+        * */
+        // document.onkeydown = function(e) {
+        //     console.log(e);
+        // }
+        // document.onkeypress = function(e) {
+        //     console.log(e);
+        // }
+
