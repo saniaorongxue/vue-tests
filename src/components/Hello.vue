@@ -9,6 +9,7 @@
           <li>{{ items.text }}</li>
         </template>
       </Nav>
+      <button @click="gotoTree">TREE</button>
     </div>
     <!--<Nav :navlist="navlist2" slot="s2"></Nav>-->
   </div>
@@ -46,7 +47,14 @@ export default {
       ]
     }
   },
-  components: { Nav }
+  components: { Nav },
+  methods: {
+    gotoTree() {
+      this.$router.push({
+        name: 'tree'
+      })
+    }
+  }
 }
 </script>
 
